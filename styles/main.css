@@ -1,0 +1,161 @@
+.body {
+  font: normal 18px Arial, sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+.header,
+.main,
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 2.66em;
+  line-height: 1.2;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.subtitle {
+  font-size: 1.33em;
+  line-height: 3.25;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.copyright {
+  font-size: 1.66em;
+  line-height: 2.6;
+}
+
+.paragraph {
+  font-size: 1em;
+  line-height: 1.667;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 110px;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 15%;
+  background-color: #fff;
+}
+
+.menu__inner {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.menu__item {
+  display: block;
+  color: #373636;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu__item:hover {
+  font-weight: bold;
+  color: #000;
+}
+
+.collection {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  background-color: #fff;
+}
+
+.collection__item {
+  width: 25%;
+  height: 50%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.collection__item:nth-child(-n+2) {
+  width: 50%;
+}
+
+.summary {
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary .title {
+  display: flex;
+  justify-content: center;
+  border-right: 2px solid black;
+  width: 50%;
+}
+
+.summary .paragraph {
+  width: 50%;
+  padding: 0 5%;
+}
+
+.skills {
+  display: flex;
+}
+
+.skills__item {
+  width: 48.5%;
+}
+
+.skills .scroll {
+  width: 3%;
+}
+
+.skills__menu {
+  width: 48.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills__name {
+  font-size: 1em;
+}
+
+.Package_design {
+  font-size: 18px;
+  font-family: "Karla";
+  color: black;
+  line-height: 4.333;
+  text-align: left;
+  -moz-transform: matrix(1.7851239669, 0, 0, 1.7857142857, 0, 0);
+  -webkit-transform: matrix(1.7851239669, 0, 0, 1.7857142857, 0, 0);
+  -ms-transform: matrix(1.7851239669, 0, 0, 1.7857142857, 0, 0);
+  position: absolute;
+  left: 1379.826px;
+  top: 2437.998px;
+  z-index: 59;
+}

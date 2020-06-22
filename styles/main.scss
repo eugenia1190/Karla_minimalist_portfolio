@@ -1,0 +1,199 @@
+$bgColor: #fff;
+$scrollWidth: 3%;
+
+@mixin skillColsWidth($scrollWidth) {
+    width: (100%/2-$scrollWidth/2);
+}
+
+@mixin mainFont {
+    font: normal 18px Arial, sans-serif;
+    color: #000;
+}
+
+@mixin link {
+    display: block;
+    color: #373636;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+        color: #000;
+    }
+}
+
+@mixin grid($topLineCols, $lines, $margin) {
+    width: 25%;
+    height: 100%/$lines;
+    margin: $margin;
+    box-sizing: border-box;
+
+    &:nth-child(-n+2) {
+        width: 100%/$topLineCols;
+    }
+}
+
+.body {
+    @include mainFont;
+
+    margin: 0;
+}
+
+.header,
+.main,
+.footer {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: $bgColor;
+}
+
+.title {
+    font-size: 2.66em;
+    line-height: 1.2;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.subtitle {
+    font-size: 1.33em;
+    line-height: 3.25;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.copyright {
+    font-size: 1.66em;
+    line-height: 2.6;
+}
+
+.paragraph {
+    font-size: 1em;
+    line-height: 1.667;
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 110px;
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    height: 15%;
+
+    background-color: $bgColor;
+}
+
+.menu__inner {
+    display: flex;
+    justify-content: space-between;
+
+    width: 40%;
+}
+
+.menu__item {
+    @include link;
+}
+
+.collection {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__scroll {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    background-color: $bgColor;
+}
+
+.collection__item {
+    @include grid(2, 2, 0);
+}
+
+.summary {
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.summary .title {
+    display: flex;
+    justify-content: center;
+    
+    border-right: 2px solid black;
+    width: 50%;
+}
+
+.summary .paragraph {
+    width: 50%;
+    padding: 0 5%;
+}
+
+.skills {
+    display: flex;
+
+}
+
+.skills__item {
+    @include skillColsWidth($scrollWidth);
+}
+
+.skills .scroll {
+    width: $scrollWidth;
+}
+
+.skills__menu {
+    @include skillColsWidth($scrollWidth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.skills__name {
+ font-size: 1em;
+}
+
+
+.Package_design {
+    font-size: 18px;
+    font-family: "Karla";
+    color: rgb(0, 0, 0);
+    line-height: 4.333;
+    text-align: left;
+    -moz-transform: matrix( 1.78512396694215,0,0,1.78571428571429,0,0);
+    -webkit-transform: matrix( 1.78512396694215,0,0,1.78571428571429,0,0);
+    -ms-transform: matrix( 1.78512396694215,0,0,1.78571428571429,0,0);
+    position: absolute;
+    left: 1379.826px;
+    top: 2437.998px;
+    z-index: 59;
+  }
+  
