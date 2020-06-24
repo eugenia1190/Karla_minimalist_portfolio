@@ -17,8 +17,7 @@ $scrollWidth: 3%;
     cursor: pointer;
 
     &:hover {
-        font-weight: bold;
-        color: #000;
+        text-shadow: 0 0 .65px #333, 0 0 .65px #333;
     }
 }
 
@@ -40,8 +39,7 @@ $scrollWidth: 3%;
 }
 
 .header,
-.main,
-.footer {
+.main {
     display: flex;
     justify-content: center;
 
@@ -140,8 +138,6 @@ $scrollWidth: 3%;
     justify-content: center;
 }
 
-
-
 .summary .title {
     display: flex;
     justify-content: center;
@@ -164,6 +160,15 @@ $scrollWidth: 3%;
     @include skillColsWidth($scrollWidth);
 }
 
+.skills__item .subtitle,
+.about .title {
+    text-align: center;
+}
+
+.skills__img {
+    width: 100%;
+}
+
 .skills .scroll {
     width: $scrollWidth;
 }
@@ -174,26 +179,98 @@ $scrollWidth: 3%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .skills__name {
- font-size: 1em;
+    @include link;
+    font-size: 1em;
+}
+
+.about {
+    display: flex;
+    height: 1150px;
+    align-items: center;
+}
+
+.about .title {
+    margin-bottom: 120px;
+}
+.about .paragraph {
+    width: 100%;
+        padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.about__photo {
+    width: 100%;
+    height: auto;
+    // padding: 0 5%;
+    box-sizing: border-box;
 }
 
 
-.Package_design {
-    font-size: 18px;
-    font-family: "Karla";
-    color: rgb(0, 0, 0);
-    line-height: 4.333;
-    text-align: left;
-    -moz-transform: matrix( 1.78512396694215,0,0,1.78571428571429,0,0);
-    -webkit-transform: matrix( 1.78512396694215,0,0,1.78571428571429,0,0);
-    -ms-transform: matrix( 1.78512396694215,0,0,1.78571428571429,0,0);
-    position: absolute;
-    left: 1379.826px;
-    top: 2437.998px;
-    z-index: 59;
-  }
-  
+.form__field {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form__label {
+    display: block;
+    font-size: 1.33em;
+    margin-bottom: 10px;
+}
+
+.form__input {
+    font-size: 1.33em;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: #F1F1F1;
+    border: none;
+}
+
+#form__message {
+    resize: none;
+    height: 150px;
+}
+
+.form__submit {
+    font-size: 1.22em;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+
+.form__submit:hover {
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 850px;
+}
+
+.footer .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__contacts {
+    width: 45%;
+}
+
+.footer .form {
+    width: 45%;
+}
