@@ -4,21 +4,24 @@ $fontColor: #000;
 $linksColor: #373636;
 $btnsColor: #000;
 $borderColor: #000;
+$scrollColor: #F1F1F1;
+$scrollColorActive: #D4D4D4;
 $photoStandartWidth: 660px;
+$standartFontSize: 18px;
 $titleStandartFontSize: 2.66em;
 $subtitleStandartFontSize: 1.33em;
 $paragraphStandartFontSize: 1em;
-$headerMenuStandartFontSize: 1.66em;
+$headerMenuStandartFontSize: 1.33em;
 $headerScrollStandartFontSize: 1.22em;
 $skillsNameStandartFontSize: 1.66em;
-$scrollWidth: 3%;
+$scrollWidth: 10%;
 
 @mixin skillColumnWidth($scrollWidth) {
     width: (100%/2-$scrollWidth/2);
 }
 
 @mixin mainFont {
-    font: normal 18px Arial, sans-serif;
+    font: normal $standartFontSize Arial, sans-serif;
     color: $fontColor;
 }
 
@@ -113,7 +116,11 @@ $scrollWidth: 3%;
         display: flex;
         justify-content: space-between;
     
-        width: 40%;
+        width: 50%;
+    }
+
+    .burger {
+        display: none;
     }
     
     .menu__item {
@@ -146,8 +153,6 @@ $scrollWidth: 3%;
 
         background-color: $bgColor;
     }
-    
-
 }
 
 .main {
@@ -161,10 +166,11 @@ $scrollWidth: 3%;
 }
 
 .summary {
-    height: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 380px;
 
     .title {
         display: flex;
@@ -183,6 +189,7 @@ $scrollWidth: 3%;
 
 .skills {
     display: flex;
+    justify-content: space-between;
     height: 1000px;
 
     .skills__item {
@@ -216,7 +223,19 @@ $scrollWidth: 3%;
         @include link;
         font-size: $skillsNameStandartFontSize;
     }
+}
 
+.scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
+}
+
+.scroll__item {
+    background-color: $scrollColor;
+    width: 30px;
+    height: 30px;
 }
 
 .about {
@@ -370,10 +389,185 @@ $scrollWidth: 3%;
 }
 
 @media (max-width: 1200px) {
+    
+    .body {
+        font-size: $standartFontSize*0.7;
+    }    
+
+    .skills {
+        height: 500px;
+    }
+    
+    .about {
+        height: 600px;
+
+        .about__photo {
+            width: $photoStandartWidth*0.6;
+        }
+
+        .title {
+            margin-bottom: 60px;
+        }
+    }
+
+    .footer {
+        height: 600px;
+
+        .title {
+            margin-bottom: 80px;
+        }
+    }
+
+    .form__input {
+        height: 30px;
+    }
+
+    #form__message {
+        height: 90px;
+    }
+}
+
+@media (max-width: 992px) {
+    
+    .body {
+        font-size: $standartFontSize*0.6;
+    }   
+
     .about {
         .about__photo {
-            width: $photoStandartWidth*0.7;
+            width: $photoStandartWidth*0.4;
+        }
+    }
+
+    .footer {
+        height: 480px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        .menu {
+            height: 10%;
+        }
+
+        .menu__inner {
+            display: none;
+        }
+
+        .burger {
+            display: flex;
+            flex-direction: column;
+    
+            width: 20px;
+            height: 20px;
+    
+            .burger__item {
+                height: 10px;
+                width: 100%;
+                border-bottom: 2px solid #000;
+            }
+        }
+
+        .header__scroll {
+            height: 15%;
+        }
+    }
+
+    .skills {
+        justify-content: space-between;
+
+        width: 100%;
+
+        .skills__item {
+            width: 90%;
+        }
+
+        .skills__menu {
+            display: none;
+        }
+
+        .scroll {
+            height: 70%;
+        }
+
+        .scroll__item {
+            width: 10px;
+            height: 10px;
+        }
+
+    }
+    .summary {
+        flex-direction: column;
+    
+        height: 250px;
+
+        .title {
+            width: 100%;
+            margin-bottom: 40px;
+            border-right: none;
+        }
+        .paragraph {
+            width: 100%;
+        }
+    }
+    
+    .about {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        height: 700px;
+
+        .about__photo,
+        .title {
+            margin-bottom: 40px;
+        }
+
+        .about__text {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .footer {
+        height: 680px;
+        
+        .container {
+            padding-top: 60px;
+        }
+
+        .footer__content {
+            flex-direction: column;
+        }
+
+        .footer__contacts {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .contacts {
+            justify-content: space-evenly;
+            .contacts__address,
+            .contacts__phone,
+            .contacts__email {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 18%;
+            }
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .form {
+            width: 100%;
         }
     }
 }
 
+@media (max-width: 480px) {
+    .container {
+        min-width: 320px;
+    }
+}
