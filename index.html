@@ -93,7 +93,7 @@
             </section>
             <section class="about">
                 <img src="img/photo.png" alt="photo" class="about__photo">
-                <div>
+                <div class="about__text">
                     <h2 class="title">About me</h2>
                     <p class="paragraph">
                         Fingerstache green juice semiotics quinoa, truffaut letterpress wolf photo booth ugh biodiesel 
@@ -115,23 +115,26 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <div class="footer__contacts">
-                <h2 class="title">Contact</h2>
-                <address>
-                    <h3 class="subtitle">Address</h3>
-                    <p class="paragraph">9114 Bridge Street , 
-                        Hillsboro, OR 97124
-                    </p>
-                </address>
-                <div>
-                    <h3 class="subtitle">Phone</h3>
-                    <p class="paragraph">+48 202-555-0114</p>
+            <div class="footer__content">
+                <div class="footer__contacts">
+                    <h2 class="title">Contact</h2>
+                    <div class="contacts">
+                        <address class="contacts__address">
+                            <h3 class="subtitle">Address</h3>
+                            <p class="paragraph">9114 Bridge Street,<br>
+                                Hillsboro, OR 97124
+                            </p>
+                        </address>
+                        <div class="contacts__phone">
+                            <h3 class="subtitle">Phone</h3>
+                            <p class="paragraph">+48 202-555-0114</p>
+                        </div>
+                        <div class="contacts__email">
+                            <h3 class="subtitle">Email</h3>
+                            <p class="paragraph">contact@yoursite.com</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="subtitle">Email</h3>
-                    <p class="paragraph">contact@yoursite.com</p>
-                </div>
-            </div>
                 <form class="form"> 
                     <fieldset class="form__field">
                         <label for="form__name" class="form__label">Name</label><input type="text" id="form__name" class="form__input">
@@ -140,8 +143,10 @@
                     </fieldset>
                     <input type="submit" value="Send" class="form__submit">
                 </form>
-            </div>
-            <div class="container"><div class="copyright">Copyright 2020 © by Damian Lisiewski</div></div>
+                </div>
+                <p class="copyright">Copyright 2020 © by Damian Lisiewski</p>
+        </div>
+            
     </footer>
 </body>
 </html>
