@@ -373,7 +373,7 @@
 
   .summary {
     flex-direction: column;
-    height: 250px;
+    height: 350px;
   }
   .summary .title {
     width: 100%;
@@ -382,12 +382,13 @@
   }
   .summary .paragraph {
     width: 100%;
+    padding: 0;
   }
 
   .about {
     flex-direction: column;
     justify-content: space-evenly;
-    height: 700px;
+    height: 850px;
   }
   .about .about__photo,
 .about .title {
@@ -409,18 +410,7 @@
   }
   .footer .footer__contacts {
     width: 100%;
-    margin-bottom: 40px;
-  }
-  .footer .contacts {
-    justify-content: space-evenly;
-  }
-  .footer .contacts .contacts__address,
-.footer .contacts .contacts__phone,
-.footer .contacts .contacts__email {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 18%;
+    margin-bottom: 50px;
   }
   .footer .title {
     margin-bottom: 20px;

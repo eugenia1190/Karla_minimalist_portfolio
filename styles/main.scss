@@ -499,7 +499,7 @@ $scrollWidth: 10%;
     .summary {
         flex-direction: column;
     
-        height: 250px;
+        height: 350px;
 
         .title {
             width: 100%;
@@ -508,6 +508,7 @@ $scrollWidth: 10%;
         }
         .paragraph {
             width: 100%;
+            padding: 0;
         }
     }
     
@@ -515,7 +516,7 @@ $scrollWidth: 10%;
         flex-direction: column;
         justify-content: space-evenly;
 
-        height: 700px;
+        height: 850px;
 
         .about__photo,
         .title {
@@ -541,19 +542,7 @@ $scrollWidth: 10%;
 
         .footer__contacts {
             width: 100%;
-            margin-bottom: 40px;
-        }
-
-        .contacts {
-            justify-content: space-evenly;
-            .contacts__address,
-            .contacts__phone,
-            .contacts__email {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 18%;
-            }
+            margin-bottom: 50px;
         }
 
         .title {
