@@ -223,6 +223,10 @@ $scrollWidth: 10%;
         @include link;
         font-size: $skillsNameStandartFontSize;
     }
+
+    .skills__name-active {
+        text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    }
 }
 
 .scroll {
@@ -237,6 +241,10 @@ $scrollWidth: 10%;
     width: 30px;
     height: 30px;
 }
+
+// .scroll__item-active {
+//     background-color: red;
+// }
 
 .about {
     display: flex;
