@@ -45,7 +45,13 @@ const skillsItem = {
 
 [...skillsName].forEach(function(item) {
    item.addEventListener('click', function(event) {
+      
+      [...skillsName].forEach(function(item) {
+         item.classList.remove('skills__name-active');
+      });
+
       this.classList.add('skills__name-active');
+      
       const skill = this.getAttribute('id');
       if (skill == 'keyVisual') {
          subtitle.innerHTML = skillsItem.keyVisual.subtitle;
@@ -60,7 +66,6 @@ const skillsItem = {
          subtitle.innerHTML = skillsItem.packageDesign.subtitle;
          paragraph.innerHTML = skillsItem.packageDesign.paragraph;
       }
-
    });
 });
 
